@@ -1,0 +1,17 @@
+# Python
+https://www.python.org/downloads/
+# Pycharm
+https://www.jetbrains.com/ru-ru/pycharm/download
+
+# virtual env
+python3 -m venv venv
+source ./venv/bin/activate
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+# github
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-pull-request-reviews-in-your-repository
+https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository
+
+./git/config
