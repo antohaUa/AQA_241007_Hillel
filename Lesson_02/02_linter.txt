@@ -1,0 +1,3 @@
+# linter
+https://github.com/wemake-services/wemake-python-styleguide
+
