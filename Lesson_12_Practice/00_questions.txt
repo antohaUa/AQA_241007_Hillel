@@ -1,0 +1,67 @@
+Data Types
+    1. What are the basic data types in Python, and how do they differ?
+    2. How are lists, tuples, and sets different in Python, and when would you use each?
+    3. What is a dictionary in Python, and how does it differ from other data types?
+    4. What is type casting in Python, and how do you convert between data types?
+    5. What is the difference between mutable and immutable data types? Give examples of each.
+    6. How does slicing work in Python lists and strings? Provide an example.
+    7. What are list comprehensions in Python, and why are they useful?
+    8. How do you merge two dictionaries in Python? Explain any methods you know.
+    9. Explain the difference between == and is when comparing data in Python.
+    10. What are Python sets, and how do they differ from lists? What are some common use cases?
+Functions
+    11. How do you define a function in Python, and what is the purpose of the return statement?
+    12. What are *args and **kwargs in Python functions, and when would you use them?
+    13. What is the difference between a lambda function and a regular function?
+    14. How do default parameters work in Python functions, and what are potential pitfalls?
+    15. What is a recursive function, and how do you avoid infinite recursion in Python?
+    16. What are closures in Python, and how do they work?
+    17. Explain the purpose and usage of decorators in Python functions.
+    18. What are global and local variables in Python, and how do you use the global keyword?
+    19. What is a higher-order function in Python? Provide examples of some common ones.
+    20. Explain the difference between map, filter, and reduce functions.
+Files
+    21. How do you open a file in Python, and what are different modes available for file handling?
+    22. What is the purpose of the with statement when handling files in Python?
+    23. How do you read the entire contents of a file at once, and how can you read it line-by-line?
+    24. How do you write data to a file in Python, and what’s the difference between write (w) and append (a) modes?
+    25. Explain how to check if a file exists before trying to open it.
+    26. What are some methods for handling file paths in Python?
+    27. How can you read and write binary files in Python?
+    28. Explain how you would handle exceptions when working with files.
+    29. What is the purpose of the seek() method in file handling?
+    30. How do you ensure that a file is properly closed after its operations are completed?
+
+Python requests Library
+    1. What is the Python requests library, and why is it commonly used in API testing?
+    2. How do you make a GET request using the requests library in Python? Provide an example.
+    3. How do you send POST requests with JSON data using requests? Provide an example.
+    4. What are HTTP status codes, and how do you handle different status codes in requests?
+    5. How can you add custom headers to a request in Python requests?
+    6. How do you handle authentication in requests, such as Basic Auth or Bearer tokens?
+    7. What is the purpose of the requests.Session object, and when would you use it?
+    8. How do you handle query parameters in requests? Provide an example.
+    9. How can you handle timeouts and retries when making HTTP requests with requests?
+    10. Explain how to upload files with the requests library. Provide an example.
+API Testing
+    11. What is API testing, and how does it differ from UI testing?
+    12. What are the key components of an HTTP request, and how are they used in API testing?
+    13. What is RESTful API testing, and what are the key principles of REST?
+    14. How do you validate the response structure and content in an API response?
+    15. What are the common HTTP methods (verbs) used in REST APIs, and what is their purpose?
+    16. Explain how you would test for negative cases or error responses in API testing.
+    17. How do you validate JSON schema in an API response using Python?
+    18. What are some common tools or libraries used for API testing besides Python requests?
+    19. How do you handle rate limiting or throttling issues in API testing?
+    20. What strategies can you use to manage authentication for multiple test cases in API testing?
+Pytest
+    21. What is Pytest, and why is it popular for Python testing?
+    22. How do you structure and organize tests in a Pytest test suite?
+    23. What are Pytest fixtures, and how are they used in test setup and teardown?
+    24. How can you pass parameters to a test function in Pytest?
+    25. Explain how to run tests in parallel using Pytest.
+    26. What is the purpose of the conftest.py file in Pytest, and how does it work?
+    27. How do you capture logs in Pytest and use them for debugging?
+    28. How can you run specific tests or a subset of tests in a large Pytest suite?
+    29. What are Pytest markers, and how do you use them to categorize or skip tests?
+    30. How do you integrate Pytest with CI/CD tools for automated testing?
