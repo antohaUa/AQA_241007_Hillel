@@ -1,0 +1,12 @@
+{
+    "results": [
+        {
+            "gender": "male",
+            "name": {
+                "title": "Mr",
+                "first": "Jerry",
+                "last": "Lambert"
+            }
+        }
+    ]
+}

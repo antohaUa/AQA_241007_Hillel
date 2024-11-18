@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Julia",
+        "last": "Lévesque"
+      },
+      "location": {
+        "street": {
+          "number": 3031,
+          "name": "Alfred St"
+        },
+        "city": "Oakville",
+        "state": "Saskatchewan",
+        "country": "Canada",
+        "postcode": "V3I 4P2",
+        "coordinates": {
+          "latitude": "-72.2496",
+          "longitude": "127.9747"
+        },
+        "timezone": {
+          "offset": "0:00",
+          "description": "Western Europe Time, London, Lisbon, Casablanca"
+        }
+      },
+      "email": "julia.levesque@example.com",
+      "login": {
+        "uuid": "99f742ae-a9fa-42f6-9d2d-dc0d18d28ba0",
+        "username": "smallswan805",
+        "password": "beretta",
+        "salt": "J7Nk0yu2",
+        "md5": "7eacb533c29f4fcff547677d6307cc66",
+        "sha1": "0c83ef286e5e1caa66003970ab45f23c1bf3fc16",
+        "sha256": "110f59be9de8b44d5ba1793da57b69ecb0beed5cda7ce53897d443b767212d6d"
+      },
+      "dob": {
+        "date": "1944-09-04T04:14:27.432Z",
+        "age": 78
+      },
+      "registered": {
+        "date": "2019-03-09T11:57:59.620Z",
+        "age": 4
+      },
+      "phone": "O81 N76-0284",
+      "cell": "J89 W47-9669",
+      "id": {
+        "name": "SIN",
+        "value": "078708815"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/9.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/9.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/9.jpg"
+      },
+      "nat": "CA"
+    }
+  ],
+  "info": {
+    "seed": "3d275308b41814e9",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}

@@ -1,0 +1,9 @@
+ - name: Sirius
+   constellation: Canis Major
+   distance: 8.6
+ - name: Betelgeuse
+   constellation: Orion
+   distance: 642.5
+ - name: Proxima Centauri
+   constellation: Centaurus
+   distance: 4.24

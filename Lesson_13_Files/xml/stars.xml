@@ -1,0 +1,8 @@
+<stars>
+    <star name="Sirius" constellation="Canis Major">
+        <distance>8.6</distance>
+    </star>
+    <star name="Proxima Centauri" constellation="Centaurus">
+        <distance>4.24</distance>
+    </star>
+</stars>
