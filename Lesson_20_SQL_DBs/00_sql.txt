@@ -1,0 +1,26 @@
+https://www.w3schools.com/sql/sql_syntax.asp
+
+https://www.sqlite.org/datatype3.html
+https://sqlitebrowser.org/dl/
+
+https://www.w3schools.com/sql/sql_join_inner.asp
+https://www.w3schools.com/sql/sql_join_left.asp
+
+
+Cursor:
+In the context of databases, a cursor is an object used to interact with the database.
+It acts as a control structure that allows you to:
+
+Execute SQL Queries: Send SQL commands (e.g., SELECT, INSERT, UPDATE, DELETE) to the database.
+Retrieve Data: Fetch query results in a structured way, such as row by row or all at once.
+Navigate Through Results: Move through the records of a result set, especially in SELECT queries.
+
+Key Features
+Lifecycle: A cursor is tied to a connection. When the connection is closed, the cursor is no longer usable.
+Scoped Resources: Using with ensures the cursor is properly closed after use.
+Multiple Cursors: You can have multiple cursors open at the same time for different queries or tasks.
+
+Why Use a Cursor?
+Separation: Keeps the query execution logic separate from the connection.
+Performance: Efficiently fetch large datasets in manageable chunks (fetchone, fetchmany).
+Flexibility: Supports prepared statements, parameterized queries, and navigation through results.

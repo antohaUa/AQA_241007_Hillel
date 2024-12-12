@@ -1,0 +1,7 @@
+https://hub.docker.com/_/postgres
+
+# default user will be 'postgres'
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres
+docker run -it --rm postgres psql -h 192.168.150.116 -U postgres
+
+

@@ -1,0 +1,8 @@
+order_id,customer_id,product,quantity
+101,1,Laptop,1
+102,1,Mouse,2
+103,2,Keyboard,1
+104,3,Monitor,1
+105,3,USB Cable,3
+106,4,Headphones,1
+107,2,Webcam,1
