@@ -1,0 +1,31 @@
+# Object-Relational Mapping (ORM) is a programming technique
+# used to map database tables to objects in programming languages.
+# Instead of writing raw SQL queries,
+# you interact with the database using objects, classes, and methods.
+
+pip install SQLAlchemy
+
+https://www.sqlalchemy.org/
+
+
+1. Abstraction of SQL
+Simplifies Code: SQLAlchemy allows you to perform database operations without needing to write raw SQL for common tasks.
+Declarative Syntax: Use Python classes to define tables, making code cleaner and easier to understand.
+2. Portability
+Database Agnostic: You can use SQLAlchemy with multiple databases (e.g., SQLite, MySQL, PostgreSQL). Switching databases is often seamless, requiring minimal changes to the code.
+3. Productivity
+Less Boilerplate: Automatically generate queries, relationships, and schema from Python classes.
+Session Management: Built-in transaction handling ensures consistent and clean interactions with the database.
+4. Performance
+Optimized Queries: SQLAlchemy gives fine control over query generation and execution when needed.
+Lazy Loading: Retrieve only the data you need, reducing memory and CPU usage.
+5. Flexibility
+Hybrid Approach: SQLAlchemy provides an ORM layer (declarative base) and a core SQL toolkit (SQLAlchemy Core) for more complex raw queries.
+Complex Queries: You can still write raw SQL queries when necessary while benefiting from SQLAlchemy's features.
+6. Data Integrity
+Type Safety: Maps Python data types to database columns, reducing the risk of type-related errors.
+Schema Management: Automatically create, update, or validate database schema based on ORM models.
+7. Relationships
+Easily define and manage complex relationships between tables using foreign keys, one-to-many, many-to-many, etc.
+8. Migration Support
+SQLAlchemy integrates well with migration tools like Alembic to manage database schema changes over time.
