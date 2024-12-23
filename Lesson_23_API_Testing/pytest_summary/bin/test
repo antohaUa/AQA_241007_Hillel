@@ -1,0 +1,3 @@
+export PYTHONPATH="<path_to_your_directory>/pytest_summary"
+export TEST_RESULTS_DIR="<path_to_your_directory>/pytest_summary/tests_results"
+pytest -s -rfEsxX -m "not unit" -p pytest_plugin "$@"

@@ -1,0 +1,2 @@
+export PYTHONPATH="<path_to_your_directory>/pytest_summary"
+pytest -v -m "unit" "$@"

@@ -1,0 +1,4 @@
+# pip install pytest-cov pytest-html
+export PYTHONPATH="<path_to_your_directory>/pytest_summary"
+ROOT_DIR="<path_to_your_directory>/pytest_summary"
+pytest --cov-report html:u_test --cov-report term-missing --cov=code --rootdir=$ROOT_DIR --html=tests_results/report.html --self-contained-html $@
