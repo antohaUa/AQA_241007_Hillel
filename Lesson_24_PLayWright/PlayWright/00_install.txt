@@ -1,0 +1,6 @@
+# https://playwright.dev/python/docs/intro
+pip install pytest-playwright
+playwright install
+
+# code generation
+playwright codegen
