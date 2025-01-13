@@ -1,0 +1,7 @@
+Test with selenium "table_example.html" define rows and columns num
+and check that in table opened in new tab
+ all cells have values that match such criteria:
+ - len == 5 symbols
+ - present only 'a-z' and '0-9' symbols
+
+ If test failed write message smth like : "2 cells (12 total) have incorrect value"

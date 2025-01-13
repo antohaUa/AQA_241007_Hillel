@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Toggle Demo</title>
+    <style>
+        #newElement {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #008CBA;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #B3B2BC;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="oldElement">
+        <p>This is the old element.</p>
+    </div>
+
+    <button onclick="toggleElements()">Click Me</button>
+
+    <div id="newElement">
+        <p>This is the new element.</p>
+    </div>
+
+    <script>
+        function toggleElements() {
+            // Hide the old element
+            document.getElementById('oldElement').style.display = 'none';
+
+            // Show the new element
+            document.getElementById('newElement').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

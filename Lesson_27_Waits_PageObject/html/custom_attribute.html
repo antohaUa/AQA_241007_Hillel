@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Setter Demo</title>
+    <style>
+        input {
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #element {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="inputField" placeholder="Enter value">
+    <button onclick="addCustomAttribute()">Set Attribute</button>
+
+    <div id="element">
+        <p>This is the element.</p>
+    </div>
+
+    <script>
+        function addCustomAttribute() {
+            var inputValue = document.getElementById('inputField').value;
+            var element = document.getElementById('element');
+
+            // Set the custom attribute with the input value
+            element.setAttribute('custom', inputValue);
+            alert('Custom attribute set to: ' + inputValue);
+        }
+    </script>
+
+</body>
+</html>

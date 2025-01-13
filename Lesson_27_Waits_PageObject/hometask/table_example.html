@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Generator</title>
+    <style>
+        table {
+            border-spacing: 0; /* Ensures no space between cells */
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid black; /* Sets a visible border for each cell */
+            padding: 10px;
+            text-align: center;
+            border-style: solid; /* Ensures borders are solid lines */
+        }
+        caption {
+            font-size: 1.5em;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter the number of rows and columns</h2>
+
+    <label for="rows">Rows: </label>
+    <input type="number" id="rows" min="1" required>
+
+    <label for="cols">Columns: </label>
+    <input type="number" id="cols" min="1" required>
+
+    <button onclick="generateTable()">Generate Table</button>
+
+    <script>
+        function generateTable() {
+            const rows = document.getElementById('rows').value;
+            const cols = document.getElementById('cols').value;
+
+            if (rows > 0 && cols > 0) {
+                const randomString = () => Math.random().toString(36).substring(2, 7); // Generates a 5-character long string
+
+                let tableHTML = `
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Random String Table</title>
+                        <style>
+                            table {
+                                border-spacing: 0;
+                                width: 100%;
+                            }
+                            th, td {
+                                border: 2px solid black;
+                                padding: 10px;
+                                text-align: center;
+                                border-style: solid;
+                            }
+                            caption {
+                                font-size: 1.5em;
+                                margin: 10px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <table>
+                            <caption>Random String Table</caption>`;
+
+                for (let i = 0; i < rows; i++) {
+                    tableHTML += '<tr>';
+                    for (let j = 0; j < cols; j++) {
+                        tableHTML += `<td>${randomString()}</td>`;
+                    }
+                    tableHTML += '</tr>';
+                }
+                tableHTML += '</table></body></html>';
+
+                const newTab = window.open();
+                newTab.document.write(tableHTML);
+                newTab.document.close();
+            } else {
+                alert("Please enter valid numbers for rows and columns.");
+            }
+        }
+    </script>
+
+</body>
+</html>
