@@ -1,12 +1,15 @@
-import pytest
 import time
+
+import pytest
 from selenium import webdriver
 
 from po_smartphones import SmartphonesPage
 
-BASE_URL = 'https://rozetka.com.ua'
 PAGE_URL = '/mobile-phones/c80003'
-URL = f'{BASE_URL}{PAGE_URL}'
+
+SORTING_WAIT_TIMEOUT = 5
+MIN_PRICE_DEFAULT = 999
+MAX_PRICE = 20000
 
 
 class TestSmartPhones:
@@ -19,21 +22,40 @@ class TestSmartPhones:
         yield driver
         driver.quit()
 
-    def test_filter_smartphones(self, driver):
-        smart_phones_po = SmartphonesPage(driver=driver)
-        smart_phones_po.load(URL)
-        time.sleep(10)
-        apple_filter = smart_phones_po.get_brand_filter_element(brand='Apple')
-        apple_filter.click()
-        #driver.refresh()
-        smart_phones_po.load(f'{URL}/producer=apple/')
-        time.sleep(10)
-        # with open('content.html', 'wt') as cont_fh:
-        #     content = driver.page_source
-        #     cont_fh.write(content)
-        breakpoint()
-        samsung_filter = smart_phones_po.get_brand_filter_element(brand='Samsung')
-        samsung_filter.click()
-        time.sleep(5)
-        smart_phones_po.load(f'{URL}/producer=apple,samsung/')
-        time.sleep(5)
+    @pytest.fixture
+    def smart_phones_po(self, driver):
+        yield SmartphonesPage(driver=driver)
+
+    @pytest.fixture(scope='class')
+    def url(self, request):
+        base_url = request.config.getoption("--baseurl")
+        yield f'{base_url}{PAGE_URL}'
+
+    def test_filter_smartphones(self, url, driver, smart_phones_po):
+        smart_phones_po.load(url)
+
+        # apple checkbox
+        initial_url = driver.current_url
+        apple_checkbox = smart_phones_po.brand_filter_checkbox(brand='Apple')
+        apple_checkbox.click()
+        assert smart_phones_po.check_page_reloaded(initial_url), 'There was no page URL reload'
+
+        # samsung checkbox
+        initial_url = driver.current_url
+        samsung_checkbox = smart_phones_po.brand_filter_checkbox(brand='Samsung')
+        samsung_checkbox.click()
+        assert smart_phones_po.check_page_reloaded(initial_url), 'There was no page URL reload'
+
+        # sorting and price
+        smart_phones_po.select_sorting_type('Від дорогих до дешевих')
+        time.sleep(SORTING_WAIT_TIMEOUT)
+        initial_url = driver.current_url
+        smart_phones_po.set_max_price(max_price=MAX_PRICE)
+        smart_phones_po.confirm_price_filter()
+        assert smart_phones_po.check_page_reloaded(initial_url), 'There was no page URL reload'
+
+        # check prices range
+        prices = smart_phones_po.phone_prices()
+        err_msg = 'Found price that not match filter'
+        assert all(MIN_PRICE_DEFAULT < int(itm.text.strip('₴').replace(' ', '')) < MAX_PRICE for itm in prices), err_msg
+        print('All prices within defined price range')
