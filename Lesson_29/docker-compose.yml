@@ -1,0 +1,23 @@
+# https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-python-pytest-example
+# https://uk.wikipedia.org/wiki/YAML
+version: '3'
+
+services:
+  allure:
+    image: "frankescobar/allure-docker-service"
+    environment:
+      CHECK_RESULTS_EVERY_SECONDS: 1
+      KEEP_HISTORY: 1
+    ports:
+      - "5050:5050"
+    volumes:
+      - ${PWD}/x_allure_results:/app/allure-results
+      - ${PWD}/x_allure_reports:/app/default-reports
+
+  allure-ui:
+    image: "frankescobar/allure-docker-service-ui"
+    environment:
+      ALLURE_DOCKER_PUBLIC_API_URL: "http://localhost:5050"
+      ALLURE_DOCKER_PUBLIC_API_URL_PREFIX: ""
+    ports:
+      - "5252:5252"

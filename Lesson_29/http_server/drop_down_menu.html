@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Double Dropdown Menu Demo</title>
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content .dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-content {
+  top: 0;
+  left: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<h2>Double Dropdown Menu Demo</h2>
+
+<div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <div class="dropdown-submenu">
+      <a href="#" class="submenu">Products</a>
+      <div class="dropdown-content">
+        <a href="#product1" class="product-link">Product 1</a>
+        <a href="#product2" class="product-link">Product 2</a>
+        <a href="#product3" class="product-link">Product 3</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Додайте JavaScript для відображення підтвердження при натисканні на пункт "Products"
+document.querySelectorAll('.product-link').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault(); // Забороняємо перехід за посиланням
+    var productName = this.textContent.trim(); // Отримуємо назву продукту
+    var confirmed = confirm("Ви обрали продукт: " + productName + ". Бажаєте продовжити?"); // Викликаємо діалогове вікно підтвердження
+    if (confirmed) {
+      window.location.href = this.href; // Переходимо за посиланням, якщо користувач підтвердив
+    }
+  });
+});
+</script>
+
+</body>
+</html>

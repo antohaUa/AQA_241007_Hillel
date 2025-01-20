@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фрейм 1</title>
+</head>
+<body>
+    <br/>	
+    <h3>Frame1</h3>	
+    <input type="text" id="input1" placeholder="Введіть текст">
+    <button onclick="verifyInput('input1')">Перевірити</button>
+
+    <script>
+        function verifyInput(inputId) {
+            var inputValue = document.getElementById(inputId).value;
+            if (inputValue === "Frame1_Secret") {
+                alert("Верифікація пройшла успішно!");
+            } else {
+                alert("Введено неправильний текст!");
+            }
+        }
+    </script>
+</body>
+</html>

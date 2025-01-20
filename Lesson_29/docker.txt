@@ -1,0 +1,35 @@
+
+https://docs.docker.com/desktop/setup/install/windows-install/
+https://docs.docker.com/desktop/setup/install/mac-install/
+apt install docker  (ubuntu)
+dnf install docker  (fedora)
+https://hub.docker.com/
+
+https://docs.docker.com/get-started/docker_cheatsheet.pdf
+
+[DOCKER VS VM]
+
+------------------------------------------------------------------------------------------------------------------------------
+Aspect             | Docker                                             | Virtual Machines                                   |
+-------------------|----------------------------------------------------|----------------------------------------------------|
+Resource Usage     | Utilizes less resources due to containerization    | Consumes more resources as each VM requires its own|
+Performance        | Generally faster startup times and lower overhead | Slower startup times and higher overhead due to VMs|
+Isolation          | Uses OS-level virtualization, less isolation      | Provides stronger isolation as each VM has its own|
+Portability        | Highly portable, can run on any Docker-compatible| Less portable, may require conversion or additional|
+                   | platform                                           | configuration for different hypervisors           |
+Flexibility        | Easier to scale and manage individual containers  | More cumbersome to manage individual VMs,         |
+                   |                                                    | but can run different operating systems on each   |
+Deployment         | Faster deployment and scaling due to lightweight | Slower deployment due to the need to boot up      |
+                   | nature of containers                              | entire VMs                                        |
+Security           | Potential for shared kernel vulnerabilities      | Offers better security through complete isolation |
+Ease of Use        | Easier to set up, deploy, and manage applications| Requires more configuration and maintenance       |
+
+# =============================================================================
+
+https://hub.docker.com/_/httpd
+docker pull httpd:2.4-bullseye
+docker run -it --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4-bullseye
+
+
+https://docs.docker.com/reference/dockerfile/
+https://hub.docker.com/_/postgres
