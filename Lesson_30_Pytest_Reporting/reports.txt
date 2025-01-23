@@ -1,0 +1,26 @@
+[Allure]
+https://github.com/fescobar/allure-docker-service-examples/tree/master/allure-docker-python-pytest-example
+docker-compose --file docker-compose.yml up
+
+pip install allure-pytest
+pytest -sv test_check_smartphones.py --alluredir=x_allure_results
+
+
+[Junit]
+https://github.com/testmoapp/junitxml
+pytest -sv test_check_smartphones.py --junit-xml=test_output.xml
+
+[HTML]
+pip install pytest-html
+pytest -sv test_check_smartphones.py --html=report.html --self-contained-html
+https://pytest-html.readthedocs.io/en/latest/user_guide.html#creating-a-self-contained-report
+
+pip install pytest-html-reporter
+pytest -sv test_check_smartphones.py --html-report=./report
+https://pypi.org/project/pytest-html-reporter/
+
+
+
+
+
+

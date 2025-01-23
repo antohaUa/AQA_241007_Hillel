@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="25.461" timestamp="2025-01-23T21:03:21.063259+02:00" hostname="AMIGO"><testcase classname="test_check_smartphones.TestSmartPhones" name="test_filter_smartphones" time="16.739" /><testcase classname="test_check_smartphones.TestSmartPhones" name="test_sorting_smartphones" time="8.306" /><testcase classname="test_check_smartphones.TestSmartPhones" name="test_price_smartphones" time="0.192"><failure message="AssertionError: Found price that not match filter&#10;assert False&#10; +  where False = all(&lt;generator object TestSmartPhones.test_price_smartphones.&lt;locals&gt;.&lt;genexpr&gt; at 0x7f73940feac0&gt;)">self = &lt;test_check_smartphones.TestSmartPhones object at 0x7f7394104bb0&gt;, url = 'https://rozetka.com.ua/mobile-phones/c80003'
+driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="71dc0017db63ee73fb44796642bf93c2")&gt;
+smart_phones_po = &lt;po_smartphones.SmartphonesPage object at 0x7f7394125040&gt;
+
+    def test_price_smartphones(self, url, driver, smart_phones_po):
+        print('Cheking price ...')
+        # check prices range
+        prices = smart_phones_po.phone_prices()
+        err_msg = 'Found price that not match filter'
+&gt;       assert all(MIN_PRICE_DEFAULT &lt; int(itm.text.strip('₴').replace(' ', '')) &lt; 10000 for itm in prices), err_msg
+E       AssertionError: Found price that not match filter
+E       assert False
+E        +  where False = all(&lt;generator object TestSmartPhones.test_price_smartphones.&lt;locals&gt;.&lt;genexpr&gt; at 0x7f73940feac0&gt;)
+
+test_check_smartphones.py:68: AssertionError</failure></testcase></testsuite></testsuites>
