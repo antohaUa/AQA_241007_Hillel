@@ -1,0 +1,32 @@
+# https://plugins.jenkins.io/
+# --------------------------------------------
+Active Choices
+https://plugins.jenkins.io/uno-choice/
+
+Allure
+
+Ansi Color
+Build Timeout
+Credentials
+https://plugins.jenkins.io/credentials/
+
+Conditional BuildStep
+Git client
+GitHub
+HTML reports
+JUnit
+Lockable Resources
+https://plugins.jenkins.io/lockable-resources/
+
+
+Mailer
+Pipeline
+Pyenv Pipeline
+https://plugins.jenkins.io/pyenv-pipeline/
+
+Rebuilder
+Slack Notification
+
+
+AUTH_CREDS  -> AUTH_CREDS_USR
+               AUTH_CREDS_PWD

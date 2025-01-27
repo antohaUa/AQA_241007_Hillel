@@ -1,0 +1,9 @@
+docker pull jenkins/jenkins:2.440.2
+
+https://www.jenkins.io/changelog/
+https://www.jenkins.io/changelog-stable/
+https://www.jenkins.io/doc/book/installing/docker/
+https://www.jenkins.io/download/
+https://hub.docker.com/r/jenkins/jenkins
+
+https://www.jenkins.io/doc/book/pipeline/syntax/
